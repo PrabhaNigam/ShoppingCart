@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>ShopSite</title>
+  <link rel="stylesheet" type="text/css" href="welcome.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./mod.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="./welcome.js"></script>
+  <script src="./modal.js"></script>
+</head>
+
+<body onload = "openModal()">
+  <nav class= "navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+
+        <a class="navbar-brand" href="./welcome.html">
+          <img src="logo.jpg" alt="logo" style="width:40px"></a>
+      </div>
+
+
+      <form class="navbar-form navbar-left" action="/action_page.php">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Search" name="search" size="40">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="./Cart.html">
+            <span class="glyphicon glyphicon-shopping-cart"></span> Cart</a>
+        </li>
+        <li>
+          <a href="./login.html">
+            <span class="glyphicon glyphicon-log-out"></span> LogOut</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+    <div class="container">
+
+        <div id="modList">
+         <div class="modItem">
+            <img src=" " id="modimg"/>
+            <div class="modDesc" id="moditems">
+              <table id="modtab">
+                <tr>
+                  <th><h3 id="name">Name : <span id="modname" ></span></h3></th>
+                  
+                </tr>
+                <tr>
+                    <th><h3 id="price">Price : <span id="modprice" ></span></h3></th>
+                    
+                </tr>
+                <tr>
+                  <th><h3 id="brand">Brand : <span id="modbrand" ></span></h3></th>
+                  
+              </tr>
+                <tr>
+                  <td>
+                    <input type="button" class="btn btn-primary primary" value="Add to Cart"/>
+                  </td>
+                  <td>
+                      <input type="button" class="btn btn-success success" value="Add to Wishlist"/>
+                    </td>
+                </tr>
+              </table>
+            </div>
+          </div> 
+        </div>
+        
+    
+</body>
+</html>
