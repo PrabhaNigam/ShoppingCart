@@ -13,6 +13,8 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="./welcome.js"></script>
   <script src="./modal.js"></script>
+  <script src="./Cart.js"></script>
+  <script src="./wishlist.js"></script>
 </head>
 
 <body onload = "openModal()">
@@ -36,6 +38,10 @@
         </div>
       </form>
       <ul class="nav navbar-nav navbar-right">
+        <li>
+              <a href="./wishlist.html">
+                <span class="glyphicon glyphicon-heart"></span> Wishlist</a>
+        </li>
         <li>
           <a href="./Cart.html">
             <span class="glyphicon glyphicon-shopping-cart"></span> Cart</a>
@@ -70,12 +76,12 @@
               </tr>
                 <tr>
                   <td>
-                    <input type="button" class="btn btn-primary primary" value="Add to Cart"/>
+                    <input type="button" class="btn btn-primary primary" value="Add to Cart" onclick="AddToCart()"/>
                   </td>
                   <td>
-                      <input type="button" class="btn btn-success success" value="Add to Wishlist"/>
+                      <input type="button" class="btn btn-success success" value="Add to Wishlist" onclick="AddToWishlist()"/>
                     </td>
-                </tr>
+                </tr> 
               </table>
             </div>
           </div> 

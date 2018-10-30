@@ -8,9 +8,9 @@ $.getJSON("./products.json", function (result) {
             document.getElementById('modname').innerHTML = d.name;
             document.getElementById('modprice').innerHTML = d.price;
             document.getElementById('modbrand').innerHTML = d.brand;
-            document.getElementById('modimg').src = d.image[0]
-
+            document.getElementById('modimg').src = d.image[0];
         }
+        
     }
 })
 

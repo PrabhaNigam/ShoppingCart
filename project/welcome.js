@@ -6,15 +6,6 @@ var fetchData = function () {
 			var item = document.createElement('div');
 			item.setAttribute("class", "col-lg-3 col-md-4 col-sm-6 col-xs-12");
 			item.setAttribute("id", "item" + d.id);
-			item.addEventListener('click', (c) => {
-	
-				var pId=(c.target.id).slice(-2)
-					
-				  localStorage.setItem('AddModal',pId);
-				  window.location="./modal.html"
-				  
-			});
-			
 			document.getElementById('display-row').appendChild(item);
 
 			var card = document.createElement('div');
@@ -26,6 +17,15 @@ var fetchData = function () {
 			image.setAttribute('class', 'card-img-top');
 			image.setAttribute('id', 'card-img'+d.id);
 			image.setAttribute('src', d.image[0]);
+			image.addEventListener('click', (c) => {
+	
+				var pId=(c.target.id).slice(-2)
+					
+				  localStorage.setItem('AddModal',pId);
+				  window.location="./modal.html"
+				  
+			});
+			
 			document.getElementById('card' + d.id).appendChild(image);
 
 			var cBody = document.createElement('div');
@@ -100,11 +100,6 @@ var fetchData = function () {
 				document.getElementById('card' + d.id).appendChild(Addbtn);
 				document.getElementById('btnCart' + d.id).innerHTML = "Add to Cart";
 
-				/*document.getElementById('item'+d.id).addEventListener('click',(e)=>{
-					alert(e.target.id.slice(-2));
-					document.getElementById("myModal").modal({show:true});
-				})
-				document.getElementById('item'+d.id).data-target="#myModal";*/
 
 		}
 	});
